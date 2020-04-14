@@ -14,4 +14,6 @@
   .filled.good {
       color: cyan;
   }
-  
+  .has-error {
+      border: 1px solid red;
+  }

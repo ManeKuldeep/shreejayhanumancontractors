@@ -19,7 +19,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Name</label>
-                                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus===true,'has-error':feedbackForm.controls['name'].invalid && (feedbackForm.controls['name'].dirty || feedbackForm.controls['name'].touched)}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                                     </div>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label>Email</label>
-                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true,'has-error':feedbackForm.controls['email'].invalid && (feedbackForm.controls['email'].dirty || feedbackForm.controls['email'].touched)}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"> <i class="nc-icon nc-email-85"></i></span>
                                     </div>
@@ -50,19 +50,29 @@
                                 </ngb-rating>
                             </div>
                             <div class="col-md-6">
-                                <p class="text-success" *ngIf="feedbackForm?.value.rating >= 7">Excellent</p>
+                                <p class="text-success" *ngIf="feedbackForm?.value.rating > 7">Excellent</p>
                                 <p class="text-info"
-                                    *ngIf="feedbackForm?.value.rating < 7 && feedbackForm?.value.rating >= 4">Good</p>
+                                    *ngIf="feedbackForm?.value.rating <= 7 && feedbackForm?.value.rating >= 4">Good</p>
                                 <p class="text-danger" *ngIf="feedbackForm?.value.rating < 4">Bad</p>
                             </div>
                         </div>
                         <label>Message</label>
-                        <textarea class="form-control" formControlName="message" rows="4"
+                        <textarea class="form-control" [ngClass]="{'has-error':feedbackForm.controls['message'].invalid && (feedbackForm.controls['message'].dirty || feedbackForm.controls['message'].touched)}" formControlName="message" rows="4"
                             placeholder="Tell us your thoughts and feelings..."></textarea>
                         <div class="row">
-                            <div class="col-md-4 mr-auto ml-auto">
-                                <button class="btn btn-danger btn-lg btn-fill" (click)="sendFeedback()">Send
-                                    Feedback</button>
+                            <div class="col-md-8 mr-auto ml-auto text-center">
+                                <button class="btn btn-success"  [disabled]="feedbackForm.invalid" (click)="sendFeedback()">
+                                    <i class="fa fa-spinner fa-spin" *ngIf="loader"></i>
+                                    Send
+                                    Feedback </button>
+                            </div>
+                            <div class="col-md-8 mr-auto ml-auto text-center text-success" *ngIf="message!=''">
+                                <hr>
+                                {{message}}
+                            </div>
+                            <div class="col-md-8 mr-auto ml-auto text-center text-danger" *ngIf="errmessage!=''">
+                                <hr>
+                                {{errmessage}}
                             </div>
                         </div>
                     </form>
