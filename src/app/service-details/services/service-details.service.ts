@@ -8,14 +8,23 @@ export class ServiceDetailsService {
   constructor() { }
   serviceDetails = {
     blasting: {
+      heading: "Blasting Service",
       description: `We are engaged in offering our prestigious client a very highly premium quality range of Blasting Services. With the aim of attaining pinnacle success in the market, we are engaged in rendering premium grade Abrasive Blasting Services. Owing to the rich 
       expertise of our team members we are able to provide premium grade protective coating for varied surfaces. We make sure to conduct rigorous 
       quality tests and render industry compliant services to strip imperfections, paint, rust and other contaminants from machined components. Further, 
       we are rendering these services for diverse industrial terrains with the assurance of competitive price `,
       key: ["Rendered by skilled professionals", "Committed to timely execution", "Compliance with set guidelines"],
-      categories: ["Grit / Shot Blasting","Sand Blasting","Copper Slag Blasting","Abrasive Blasting","Aluminum Oxide Blasting","Industrial Copper Slag Blasting"]
+      categories: [
+        {src:"./assets/img/cover.jpg",name:"Grit / Shot Blasting"},
+        {src:"./assets/img/cover.jpg",name:"Sand Blasting"},
+        {src:"./assets/img/cover.jpg",name:"Copper Slag Blasting"},
+        {src:"./assets/img/cover.jpg",name:"Abrasive Blasting"},
+        {src:"./assets/img/cover.jpg",name:"Aluminum Oxide Blasting"},
+        {src:"./assets/img/cover.jpg",name:"Industrial Copper Slag Blasting"}
+      ]
     },
     painting:{
+      heading: "Painting Service",
       description: `We are engaged in offering a wide range of Painting Services. 
 
       We are well known entity involved in rendering high quality Painting Services. We make sure to win strong client trust by offering top rated sewices 
@@ -28,17 +37,18 @@ export class ServiceDetailsService {
         "High grade resources"
       ],
       categories: [
-        "Epoxy brush painting",
-        "Polyurea / polyurethane coating",
-        "Industrial painting",
-        "Tank painting",
-        "Anti corrosion coating",
-        "Protective coating",
-        "Chemical coating",
-        "All coating services"
+        {src:"./assets/img/cover.jpg",name:"Epoxy brush painting"},
+        {src:"./assets/img/cover.jpg",name:"Polyurea / polyurethane coating"},
+        {src:"./assets/img/cover.jpg",name:"Industrial painting"},
+        {src:"./assets/img/cover.jpg",name:"Tank painting"},
+        {src:"./assets/img/cover.jpg",name:"Anti corrosion coating"},
+        {src:"./assets/img/cover.jpg",name:"Protective coating"},
+        {src:"./assets/img/cover.jpg",name:"Chemical coating"},
+        {src:"./assets/img/cover.jpg",name:"All coating services"}
       ]
     },
     grouting:{
+      heading: "Drilling / Grouting / Soil Nailing Service",
       description: `Grouting generally refers to improving the rock. Grouting is used during new dam construction and for remedial work. The process involves drilling 
       holes and injecting a fluid grout under moderate pressures into the subgrade to seal the rockto reduce its permeability. The process has been in use 
       since the late 1920's and has evolved to a verytechnical process.`,
@@ -51,6 +61,7 @@ export class ServiceDetailsService {
       categories: []
     },
     fire:{
+      heading: "Fire Protection Service",
       description: `We offer reliable Fireproofing Services to ourvalued customers. 
 
       We have attained wide reputation in the market by rendering best quality Fireproofing Insulation Spray On Structures. We employ the most 
@@ -63,12 +74,13 @@ export class ServiceDetailsService {
         "Trained professionals"
       ],
       categories: [
-        "Intumescent coating",
-        "Cementitius fire protection coating",
-        "Spray fire proofing"
+        {src:"./assets/img/cover.jpg",name:"Intumescent coating"},
+        {src:"./assets/img/cover.jpg",name:"Cementitius fire protection coating"},
+        {src:"./assets/img/cover.jpg",name:"Spray fire proofing"}
       ]
     },
-    guiniting:{
+    guniting:{
+      heading: "Guniting Service",
       description: `Guniting Services is the process of conveying desire mixer of dry cement. sand and /or aggregate under air pressure at high velocity with iust 
       sufficient quantity ofwaterin process like rehabilitation, carrying out repair as well as for restoration works. 
       
@@ -84,17 +96,17 @@ export class ServiceDetailsService {
       categories: []
     },
     shortcret:{
-      description: `<h6> Dry ShortCret </h6> In this process, cement and moistaggregate are mixed and then placed into a devicethatmetersthe mixed material into a stream ofcompressed air. 
+      heading: "Shortcret Service",
+      description: `Dry ShortCret process, cement and moistaggregate are mixed and then placed into a devicethatmetersthe mixed material into a stream ofcompressed air. 
       Material is carried by the compressed airthrough a delivery hose to the nozzle where water is added under pressure through a perforated ring. The 
       waterthoroughlywetsthe other ingredients asthe mixture is jettedfrom the nozzle at high velocity onto the surface to be shotcreted.
-      </br></br><h6> Wet ShortCret</h6>
-      In the wet-mix process, all ingredients arefirst mixed to produce mortar or concrete. The mortar or concrete is then placed into delivery equipment. 
-The material isforced through a delivery hosetothe nozzle where compressed air is injected to increase velocity.
-      `,
+      Wet ShortCret, In the wet-mix process, all ingredients arefirst mixed to produce mortar or concrete. The mortar or concrete is then placed into delivery equipment. 
+The material isforced through a delivery hosetothe nozzle where compressed air is injected to increase velocity.`,
       key: [],
       categories: []
     },
     cementmortar:{
+      heading: "Cement Mortar Lining Service",
       description: `We offer reliable Cement Mortar Lining Sonics to ourvalued customers. 
 
       We are well known enterprise engaged in providing high in demand 

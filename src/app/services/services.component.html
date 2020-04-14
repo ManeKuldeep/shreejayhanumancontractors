@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mr-auto ml-auto">
-                    <h5>Major highlights of the services offered by us</h5>
+                    <h5 class="text-danger">Major highlights of the services offered by us</h5>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                     <div class="card page-carousel">
                         <ngb-carousel [interval]="4000" [pauseOnHover]="true">
                             <ng-template ngbSlide *ngFor="let img of serviceImages">
-                                <img [src]="img.src" alt="Random first slide">
+                                <img [src]="img.src" alt="...">
                                 <div class="carousel-caption">
                                     <h3>{{img.description}}</h3>
                                 </div>
@@ -48,7 +48,7 @@
                         <div class="card-footer">
                             <a href="javascript:void(0)">
                                 <div class="author">
-                                    <h4 class="card-title">{{img.description}} Services</h4>
+                                    <h4 class="card-title text-danger">{{img.description}} Services</h4>
                                     <a (click)="navigateTo(img)" class="btn btn-link btn-danger">See more</a>
                                 </div>
                             </a>

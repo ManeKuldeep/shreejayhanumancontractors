@@ -11,6 +11,16 @@ export class ServiceDetailsComponent implements OnInit {
 
   constructor(public router: ActivatedRoute,public detailService: ServiceDetailsService) { }
   selectedService: any;
+  serviceImages = [
+    "./assets/img/cover.jpg",
+    "./assets/img/cover.jpg",
+    "./assets/img/cover.jpg",
+    "./assets/img/cover.jpg",
+    "./assets/img/cover.jpg",
+    "./assets/img/cover.jpg",
+    "./assets/img/cover.jpg",
+    "./assets/img/cover.jpg"
+  ]
   ngOnInit(): void {
     this.router.params.subscribe(params=>{
       this.selectedService = this.detailService.serviceDetails[params.service]
