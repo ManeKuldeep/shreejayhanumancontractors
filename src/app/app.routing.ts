@@ -10,6 +10,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { DetailsComponent } from './details/details.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes =[
     { path: 'projects',      component: ProjectsComponent },
     { path: 'aboutus',      component: AboutusComponent },
     { path: 'details',      component: DetailsComponent },
+    { path: 'service-details/:service',      component: ServiceDetailsComponent },
     { path: 'feedback',      component: FeedbackComponent },
     { path: 'contactus',      component: ContactusComponent }
 ];

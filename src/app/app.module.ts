@@ -15,6 +15,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { DetailsComponent } from './details/details.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ComponentsComponent } from './components/components.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ComponentsComponent } from './components/components.component';
     ProjectsComponent,
     AboutusComponent,
     DetailsComponent,
-    ContactusComponent
+    ContactusComponent,
+    ServiceDetailsComponent
   ],
   imports: [
     BrowserModule,
