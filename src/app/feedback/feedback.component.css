@@ -1,0 +1,17 @@
+.star {
+    font-size: 2rem;
+    color: #b0c4de;
+  }
+  .filled {
+    color: #f7f7f8;
+  }
+  .filled.bad {
+    color: #ff1e1e;
+  }
+  .filled.excellent {
+      color: lawngreen;
+  }
+  .filled.good {
+      color: cyan;
+  }
+  

@@ -1,5 +1,6 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/feedback.jpg');">
+    <div class="page-header page-header-xs" data-parallax="true"
+        style="background-image: url('./assets/img/feedback.jpg');">
         <div class="filter"></div>
         <div class="container">
             <div class="motto text-center">
@@ -9,42 +10,64 @@
     </div>
 </div>
 <div class="main">
-<div class="section landing-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 mr-auto ml-auto">
-                <h2 class="text-center">Share your thoughts with us.</h2>
-                <form class="contact-form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Name</label>
-                            <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+    <div class="section landing-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="text-center">Share your thoughts with us.</h2>
+                    <form class="contact-form" [formGroup]="feedbackForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" formControlName="name" placeholder="Name"
+                                        (focus)="focus=true" (blur)="focus=false">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="nc-icon nc-email-85"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" formControlName="email" placeholder="Email"
+                                        (focus)="focus1=true" (blur)="focus1=false">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <label>Email</label>
-                            <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                        <label>Rating</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ngb-rating [(rate)]="feedbackForm?.value.rating" formControlName="rating">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3"
+                                            [class.good]="index >= 3 && index <7"
+                                            [class.excellent]="index >= 7">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-success" *ngIf="feedbackForm?.value.rating >= 7">Excellent</p>
+                                <p class="text-info"
+                                    *ngIf="feedbackForm?.value.rating < 7 && feedbackForm?.value.rating >= 4">Good</p>
+                                <p class="text-danger" *ngIf="feedbackForm?.value.rating < 4">Bad</p>
                             </div>
                         </div>
-                    </div>
-                    <label>Message</label>
-                    <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
-                    <div class="row">
-                        <div class="col-md-4 mr-auto ml-auto">
-                            <button class="btn btn-danger btn-lg btn-fill" (click)="sendFeedback()">Send Feedback</button>
+                        <label>Message</label>
+                        <textarea class="form-control" formControlName="message" rows="4"
+                            placeholder="Tell us your thoughts and feelings..."></textarea>
+                        <div class="row">
+                            <div class="col-md-4 mr-auto ml-auto">
+                                <button class="btn btn-danger btn-lg btn-fill" (click)="sendFeedback()">Send
+                                    Feedback</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>

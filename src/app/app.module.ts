@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
@@ -16,9 +16,20 @@ import { DetailsComponent } from './details/details.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ComponentsComponent } from './components/components.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
+import { CommonModule } from '@angular/common';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    NgbModule,
+    FormsModule,
+    RouterModule,
+    AppRoutingModule,
+    CommonModule,
+    ReactiveFormsModule
+  ],
   declarations: [
     ComponentsComponent,
     AppComponent,
@@ -29,14 +40,8 @@ import { ServiceDetailsComponent } from './service-details/service-details.compo
     AboutusComponent,
     DetailsComponent,
     ContactusComponent,
-    ServiceDetailsComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    FormsModule,
-    RouterModule,
-    AppRoutingModule,
+    ServiceDetailsComponent,
+    FeedbackComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
