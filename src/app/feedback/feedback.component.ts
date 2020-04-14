@@ -9,6 +9,8 @@ import * as firebase from "firebase/app";
 export class FeedbackComponent implements OnInit {
 
   constructor() { }
+  focus;
+    focus1;
   feedbackForm: FormGroup;
   loader = false;
   default = {
@@ -20,6 +22,17 @@ export class FeedbackComponent implements OnInit {
   message = ''
   errmessage = ''
   ngOnInit() {
+    let input_group_focus = document.getElementsByClassName('form-control');
+    let input_group = document.getElementsByClassName('input-group');
+    for (let i = 0; i < input_group.length; i++) {
+        input_group[i].children[0].addEventListener('focus', function (){
+            input_group[i].classList.add('input-group-focus');
+        });
+        input_group[i].children[0].addEventListener('blur', function (){
+            input_group[i].classList.remove('input-group-focus');
+        });
+    }
+
     this.feedbackForm = new FormGroup({
       name: new FormControl('',Validators.required),
       email: new FormControl('',[Validators.required, Validators.email]),
