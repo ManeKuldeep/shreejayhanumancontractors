@@ -15,7 +15,7 @@ export class ServicesComponent implements OnInit {
     {src: "./assets/img/cover.jpg",description:"Drilling / Grouting / Soil Nailing",service: "grouting"},
     {src: "./assets/img/cover.jpg",description:"Fire Protection",service: "fire"},
     {src: "./assets/img/cover.jpg",description:"Guniting",service: "guniting"},
-    {src: "./assets/img/cover.jpg",description:"Shortcret",service: "shortcret"},
+    {src: "./assets/img/cover.jpg",description:"Shotcrete",service: "shotcrete"},
     {src: "./assets/img/cover.jpg",description:"Cement Mortar Lining",service: "cementmortar"},
   ]
   ngOnInit(): void {

@@ -95,12 +95,12 @@ export class ServiceDetailsService {
       ],
       categories: []
     },
-    shortcret:{
-      heading: "Shortcret Service",
-      description: `Dry ShortCret process, cement and moistaggregate are mixed and then placed into a devicethatmetersthe mixed material into a stream ofcompressed air. 
+    shotcrete:{
+      heading: "Shotcrete Service",
+      description: `Dry ShotCrete process, cement and moistaggregate are mixed and then placed into a devicethatmetersthe mixed material into a stream ofcompressed air. 
       Material is carried by the compressed airthrough a delivery hose to the nozzle where water is added under pressure through a perforated ring. The 
       waterthoroughlywetsthe other ingredients asthe mixture is jettedfrom the nozzle at high velocity onto the surface to be shotcreted.
-      Wet ShortCret, In the wet-mix process, all ingredients arefirst mixed to produce mortar or concrete. The mortar or concrete is then placed into delivery equipment. 
+      Wet ShotCrete, In the wet-mix process, all ingredients arefirst mixed to produce mortar or concrete. The mortar or concrete is then placed into delivery equipment. 
 The material isforced through a delivery hosetothe nozzle where compressed air is injected to increase velocity.`,
       key: [],
       categories: []
