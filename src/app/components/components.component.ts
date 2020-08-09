@@ -40,12 +40,9 @@ export class ComponentsComponent implements OnInit {
   feedbacks = [];
   images = [
     "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue.jpg?alt=media&token=265a5da2-4ed3-4dc9-8c6c-16c95a696d66",
-    "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue1.jpg?alt=media&token=7da3fd04-092f-4d5d-b4fc-c3c8eb875e3e",
-    "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue2.JPG?alt=media&token=82467477-062d-44aa-930c-512d8587220a",
     "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue3.JPG?alt=media&token=9040c6c5-044c-4370-8159-2d01c487274d",
     "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue4.JPG?alt=media&token=dfc2e4ec-24af-4dfe-b785-f07447d012ae",
     "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue5.JPG?alt=media&token=aff1becb-3c95-4ad2-91e7-03fde939bb9e",
-    "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue6.JPG?alt=media&token=1bbd7557-164b-4b6c-8515-80a4b46ec08e",
   ];
   constructor(private renderer: Renderer2) {}
   isWeekend(date: NgbDateStruct) {

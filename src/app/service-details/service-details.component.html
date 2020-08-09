@@ -1,68 +1,82 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true"
-        style="background-image: url('./assets/img/soilnailing.jpg');">
-        <div class="filter"></div>
-        <div class="container">
-            <div class="motto text-center">
-                <h3>{{selectedService.heading}}</h3>
-            </div>
-        </div>
+  <div
+    class="page-header page-header-xs"
+    data-parallax="true"
+    style="background-image: url('./assets/img/soilnailing.jpg');"
+  >
+    <div class="filter"></div>
+    <div class="container">
+      <div class="motto text-center">
+        <h3>{{ selectedService.heading }}</h3>
+      </div>
     </div>
+  </div>
 </div>
 <div class="main">
-    <div class="section text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 mr-auto ml-auto">
-                    <div class="card page-carousel">
-                        <ngb-carousel [interval]="4000" [pauseOnHover]="true">
-                            <ng-template ngbSlide *ngFor="let img of serviceImages">
-                                <img [src]="img" alt="...">
-                                <!-- <div class="carousel-caption">
+  <div class="section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mr-auto ml-auto">
+          <div class="card page-carousel">
+            <ngb-carousel [interval]="4000" [pauseOnHover]="true">
+              <ng-template ngbSlide *ngFor="let img of serviceImages">
+                <img [src]="img" alt="..." />
+                <!-- <div class="carousel-caption">
                                     <h3>{{img.description}}</h3>
                                 </div> -->
-                            </ng-template>
-                        </ngb-carousel>
-                    </div>
-                </div>
-            </div>
+              </ng-template>
+            </ngb-carousel>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="section section-dark text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mr-auto ml-auto">
-                    <p class="description">{{selectedService.description}}</p>
-                </div>
-                <div class="col-md-6 mr-auto ml-auto description" *ngIf="selectedService?.key.length>0">
-                    <hr>
-                    <ul class="follows">
-                        <li *ngFor="let key of selectedService.key">{{key}}</li>
-                    </ul>
-                </div>
-            </div>
+  </div>
+  <div class="section section-dark text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mr-auto ml-auto">
+          <p class="description">{{ selectedService.description }}</p>
         </div>
-    </div>
-    <div class="section text-center" *ngIf="selectedService?.categories.length>0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 ml-auto mr-auto shadow" *ngFor="let category of selectedService.categories">
-                    <div class="card card-profile card-plain">
-                        <div class="card-avatar" style="border-radius: 0%;max-height: 145px;">
-                            <img [src]="category.src" alt="...">
-                        </div>
-                        <div class="card-footer">
-                            <a href="javascript:void(0)">
-                                <div class="author">
-                                    <h4 class="card-title text-danger">{{category.name}}</h4>
-                                    <!-- <a (click)="navigateTo(img)" class="btn btn-link btn-danger">See more</a> -->
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div
+          class="col-md-6 mr-auto ml-auto description"
+          *ngIf="selectedService?.key.length > 0"
+        >
+          <hr />
+          <ul class="follows">
+            <li *ngFor="let key of selectedService.key">{{ key }}</li>
+          </ul>
         </div>
+      </div>
     </div>
-
+  </div>
+  <div
+    class="section text-center"
+    *ngIf="selectedService?.categories.length > 0"
+  >
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-md-4 ml-auto mr-auto shadow"
+          *ngFor="let category of selectedService.categories"
+        >
+          <div class="card card-profile card-plain">
+            <div
+              class="card-avatar"
+              style="border-radius: 0%; max-height: 145px;"
+            >
+              <img [src]="category.src" alt="..." />
+            </div>
+            <div class="card-footer">
+              <a href="javascript:void(0)">
+                <div class="author">
+                  <h4 class="card-title text-danger">{{ category.name }}</h4>
+                  <!-- <a (click)="navigateTo(img)" class="btn btn-link btn-danger">See more</a> -->
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

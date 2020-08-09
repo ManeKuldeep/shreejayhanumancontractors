@@ -27,13 +27,14 @@ export class ServicesComponent implements OnInit {
       service: "grouting",
     },
     {
-      src: "./assets/img/cover.jpg",
+      src:
+        "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Ffire2.jpg?alt=media&token=0db0c128-db8a-41e5-bc92-afbc8ed1e877",
       description: "Fire Protection",
       service: "fire",
     },
     {
       src:
-        "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fguineting.jpg?alt=media&token=afce9f64-d227-40c5-bb30-bfd5592ecc0a",
+        "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fstatue.jpg?alt=media&token=265a5da2-4ed3-4dc9-8c6c-16c95a696d66",
       description: "Guniting",
       service: "guniting",
     },
@@ -44,7 +45,8 @@ export class ServicesComponent implements OnInit {
       service: "shotcrete",
     },
     {
-      src: "./assets/img/cover.jpg",
+      src:
+        "https://firebasestorage.googleapis.com/v0/b/shreejayhanumancontracto-8e8ea.appspot.com/o/Images%2Fcement3.jpeg?alt=media&token=3cdf4684-2387-43e6-9af0-bd0bdcc7da58",
       description: "Cement Mortar Lining",
       service: "cementmortar",
     },
